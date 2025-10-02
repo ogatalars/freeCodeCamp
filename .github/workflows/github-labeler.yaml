@@ -11,6 +11,7 @@ concurrency:
 
 jobs:
   triage:
+    if: ${{ false }}
     permissions:
       # for actions/labeler to determine modified files
       contents: read

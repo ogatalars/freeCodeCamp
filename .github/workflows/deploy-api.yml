@@ -14,6 +14,7 @@ on:
 
 jobs:
   setup-jobs:
+    if: ${{ false }}
     name: Setup Jobs
     runs-on: ubuntu-22.04
     outputs:
@@ -43,6 +44,7 @@ jobs:
           esac
 
   build:
+    if: ${{ false }}
     name: Build & Push
     needs: setup-jobs
     uses: ./.github/workflows/docker-docr.yml
@@ -52,6 +54,7 @@ jobs:
     secrets: inherit
 
   deploy:
+    if: ${{ false }}
     name: Deploy to Docker Swarm -- ${{ needs.setup-jobs.outputs.tgt_env_short }}
     runs-on: ubuntu-22.04
     needs: [setup-jobs, build]

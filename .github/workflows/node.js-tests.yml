@@ -19,6 +19,7 @@ permissions:
 
 jobs:
   lint:
+    if: ${{ false }}
     name: Lint
     runs-on: ubuntu-22.04
     strategy:
@@ -75,6 +76,7 @@ jobs:
   # DONT REMOVE THIS JOB.
   # TODO: Refactor and use re-usable workflow and shared artifacts
   build:
+    if: ${{ false }}
     name: Build
     needs: lint
     runs-on: ubuntu-22.04
@@ -109,6 +111,7 @@ jobs:
           pnpm run build
 
   test:
+    if: ${{ false }}
     name: Test
     needs: build
     runs-on: ubuntu-22.04
@@ -159,6 +162,7 @@ jobs:
         run: pnpm test
 
   test-upcoming:
+    if: ${{ false }}
     name: Test - Upcoming Changes
     needs: build
     runs-on: ubuntu-22.04

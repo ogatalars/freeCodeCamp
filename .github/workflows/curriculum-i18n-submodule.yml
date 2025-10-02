@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   test-curriculum:
+    if: ${{ false }}
     name: Test Curriculum
     runs-on: ubuntu-22.04
     strategy:

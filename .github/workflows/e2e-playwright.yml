@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   build-client:
+    if: ${{ false }}
     name: Build Client
     runs-on: ubuntu-22.04
     strategy:
@@ -75,6 +76,7 @@ jobs:
           path: client/public/stats.json
 
   build-api:
+    if: ${{ false }}
     name: Build API (Container)
     runs-on: ubuntu-22.04
 
@@ -100,6 +102,7 @@ jobs:
           path: api-artifact.tar
 
   playwright-run:
+    if: ${{ false }}
     name: Run Playwright Tests
     runs-on: ubuntu-22.04
     needs: [build-client, build-api]

@@ -13,6 +13,7 @@ env:
 
 jobs:
   i18n-upload-curriculum-files:
+    if: ${{ false }}
     name: Learn
     runs-on: ubuntu-22.04
 

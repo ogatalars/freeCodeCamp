@@ -22,6 +22,7 @@ on:
 
 jobs:
   setup-jobs:
+    if: ${{ false }}
     name: Setup Jobs
     runs-on: ubuntu-22.04
     outputs:
@@ -51,6 +52,7 @@ jobs:
           esac
 
   setup-matrix:
+    if: ${{ false }}
     name: Setup Matrix
     runs-on: ubuntu-22.04
     needs: setup-jobs
@@ -141,6 +143,7 @@ jobs:
             core.setOutput('matrix', JSON.stringify(matrix));
 
   client:
+    if: ${{ false }}
     name: Clients - [${{ needs.setup-jobs.outputs.tgt_env_short }}] [${{ matrix.lang-name-short }}]
     needs: [setup-jobs, setup-matrix]
     runs-on: ubuntu-22.04

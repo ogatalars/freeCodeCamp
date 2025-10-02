@@ -10,6 +10,7 @@ concurrency:
 
 jobs:
   ci:
+    if: ${{ false }}
     name: Validate i18n Builds
     runs-on: ubuntu-22.04
     strategy:

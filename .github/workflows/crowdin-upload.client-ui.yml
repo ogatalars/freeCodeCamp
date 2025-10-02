@@ -13,6 +13,7 @@ env:
 
 jobs:
   i18n-upload-client-ui-files:
+    if: ${{ false }}
     name: Client
     runs-on: ubuntu-22.04
 

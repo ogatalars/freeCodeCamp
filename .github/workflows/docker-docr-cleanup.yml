@@ -6,6 +6,7 @@ on:
 
 jobs:
   remove:
+    if: ${{ false }}
     name: Delete Old Images
     runs-on: ubuntu-latest
     strategy:

@@ -10,6 +10,7 @@ on:
 
 jobs:
   build-and-push-image:
+    if: ${{ false }}
     runs-on: ubuntu-22.04
     permissions:
       contents: read

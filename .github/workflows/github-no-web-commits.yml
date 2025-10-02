@@ -12,6 +12,7 @@ on:
 
 jobs:
   has-web-commits:
+    if: ${{ false }}
     runs-on: ubuntu-22.04
     steps:
       - name: Check if PR author is allow-listed

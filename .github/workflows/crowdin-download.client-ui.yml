@@ -13,6 +13,7 @@ env:
 
 jobs:
   i18n-download-client-ui-translations:
+    if: ${{ false }}
     name: Client
     runs-on: ubuntu-22.04
 
